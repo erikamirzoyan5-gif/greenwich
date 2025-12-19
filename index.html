@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greenwich</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="logo">
+      <img src="./logo.png" alt="Logo">
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/greenwicharmenia?igsh=czMwdDVqeXcyN3Zs"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@greenwich_armenia?_r=1&_t=ZS-92EiMnIQkEx"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61578377498350&rdid=x7qpXda1buRWCx10&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17BB9Q4EhF%2F#"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </header>
+
+  <!-- MAIN SECTION -->
+  <section class="main-section">
+    <div class="content">
+      <h1>We’re working on the official Greenwich website.</h1>
+      <p>The new platform will launch soon. Until then, we appreciate your patience.</p>
+      <p>If you have any questions or suggestions in the meantime, you can contact our team.</p>
+      <p>
+        At the moment, work is in progress, but you can use our Telegram channel.
+        <a href="https://t.me/+_pwnjwFsOmY3ZjI6" target="_blank">TG</a>
+      </p>
+
+      <button onclick="toggleContact()">Contact us</button>
+    </div>
+
+    <div class="image-box">
+      <img src="./1.png" alt="Character">
+    </div>
+  </section>
+
+  <!-- CONTACT PANEL -->
+  <div class="contact-panel" id="contactPanel">
+    <div class="contact-content">
+      <h2>Contact us</h2>
+      <p>Email: info@greenwich.com</p>
+      <p>Phone: +374 94-57-75-85</p>
+      <p>
+        Telegram:
+        <a href="https://t.me/+_pwnjwFsOmY3ZjI6" target="_blank">Open Telegram</a>
+      </p>
+
+      <button class="close-btn" onclick="toggleContact()">Close</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function toggleContact() {
+      document.getElementById("contactPanel").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
+
+
+      
+   
