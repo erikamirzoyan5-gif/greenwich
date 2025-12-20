@@ -85,7 +85,7 @@ button:hover {
 .image-box img {
   width: 360px;
   margin-left: 40px;
-  margin-top: -120px;
+  /* ՀԵՌԱՑՐԵԼ margin-top -120px-ը, դա է խնդիրը */
 }
 
 /* ------------------ CONTACT PANEL ------------------ */
@@ -161,15 +161,15 @@ button:hover {
   .main-section {
     display: flex;
     flex-direction: column;
-    padding: 40px 30px;
-    min-height: calc(100vh - 135px); /* Ավելացրել եմ նվազագույն բարձրություն */
+    padding: 40px 30px 0 30px; /* Ներքևի padding-ը 0 */
+    min-height: 100vh;
   }
 
   .content {
     max-width: 100%;
     width: 100%;
-    margin-bottom: 40px;
-    flex: 1; /* Տեքստը զբաղեցնի հասանելի տարածքը */
+    margin-bottom: 0; /* Հեռացնել margin-bottom-ը */
+    padding-bottom: 40px; /* Ավելացնել padding ներքևից */
   }
 
   .content h1 {
@@ -188,15 +188,16 @@ button:hover {
     font-size: 22px; /* ՄԵԾ կոճակ */
     padding: 16px 32px;
     margin-top: 25px;
+    margin-bottom: 40px; /* Ավելացնել margin ներքևից */
   }
 
-  /* Նկարը տեղափոխել ներքև */
+  /* Նկարը տեղափոխել ներքև - ԿՐԿԻՆ ՎԵՐԱԳՐԵԼ */
   .image-box {
     width: 100%;
     text-align: center;
-    margin-top: auto; /* Նկարը հրել ներքև */
-    padding-top: 40px; /* Ավելացնել տարածություն վերևից */
-    padding-bottom: 40px; /* Ավելացնել տարածություն ներքևից */
+    margin-top: auto; /* Սա կհրի նկարը ներքև */
+    padding-top: 20px; /* Տարածություն վերևից */
+    padding-bottom: 40px; /* Տարածություն ներքևից */
   }
 
   .image-box img {
@@ -206,6 +207,7 @@ button:hover {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
+    /* ՄԻԱՆԱԼ մաքրել բոլոր margin-ները */
   }
 
   /* CONTACT PANEL */
@@ -253,8 +255,8 @@ button:hover {
   }
   
   .main-section {
-    padding: 35px 25px;
-    min-height: calc(100vh - 120px);
+    padding: 35px 25px 0 25px;
+    min-height: 100vh;
   }
   
   .content h1 {
@@ -268,6 +270,7 @@ button:hover {
   button {
     font-size: 20px; /* ՄԵԾ կոճակ */
     padding: 15px 30px;
+    margin-bottom: 30px;
   }
   
   .image-box img {
@@ -276,7 +279,7 @@ button:hover {
   }
   
   .image-box {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
   }
 }
@@ -296,12 +299,23 @@ button:hover {
     margin-left: 15px;
   }
   
+  .main-section {
+    padding: 30px 20px 0 20px;
+    min-height: 100vh;
+  }
+  
   .content h1 {
-    font-size: 30px; /* ՄԵԾ տեքստ */
+    font-size: 32px; /* ՄԵԾ տեքստ */
   }
   
   .content p {
     font-size: 18px; /* ՄԵԾ տեքստ */
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 14px 28px;
+    margin-bottom: 25px;
   }
   
   .image-box img {
@@ -310,7 +324,7 @@ button:hover {
   }
   
   .image-box {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 25px;
   }
 }
