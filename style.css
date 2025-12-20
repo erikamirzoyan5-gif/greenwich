@@ -68,7 +68,7 @@ body {
 }
 
 button {
-  margin-top: 10px;               
+  margin-top: 10px;
   padding: 12px 24px;
   background: #f7970f;
   border: none;
@@ -85,7 +85,7 @@ button:hover {
 .image-box img {
   width: 360px;
   margin-left: 40px;
-  /* ՀԵՌԱՑՐԵԼ margin-top -120px-ը, դա է խնդիրը */
+  margin-top: -120px;
 }
 
 /* ------------------ CONTACT PANEL ------------------ */
@@ -143,7 +143,8 @@ button:hover {
 
 /* ================== MOBILE RESPONSIVE ================== */
 @media (max-width: 768px) {
-  /* TOP BAR - մեծացրել եմ */
+
+  /* TOP BAR */
   .top-bar {
     padding: 25px 30px;
   }
@@ -157,57 +158,50 @@ button:hover {
     margin-left: 25px;
   }
 
-  /* MAIN SECTION - ամբողջովին վերափոխել եմ */
+  /* MAIN SECTION */
   .main-section {
     display: flex;
     flex-direction: column;
-    padding: 40px 30px 0 30px; /* Ներքևի padding-ը 0 */
-    min-height: 100vh;
+    align-items: center;
+    padding: 40px 30px;
   }
 
   .content {
+    order: 1;
     max-width: 100%;
     width: 100%;
-    margin-bottom: 0; /* Հեռացնել margin-bottom-ը */
-    padding-bottom: 40px; /* Ավելացնել padding ներքևից */
+    margin-bottom: 40px;
   }
 
   .content h1 {
-    font-size: 42px; /* ՄԵԾ տեքստ */
-    margin-bottom: 25px;
+    font-size: 38px;
     line-height: 1.3;
+    margin-bottom: 25px;
   }
 
   .content p {
-    font-size: 22px; /* ՄԵԾ տեքստ */
-    margin-bottom: 20px;
+    font-size: 20px;
     line-height: 1.6;
+    margin-bottom: 20px;
   }
 
   button {
-    font-size: 22px; /* ՄԵԾ կոճակ */
-    padding: 16px 32px;
+    font-size: 20px;
+    padding: 15px 30px;
     margin-top: 25px;
-    margin-bottom: 40px; /* Ավելացնել margin ներքևից */
   }
 
-  /* Նկարը տեղափոխել ներքև - ԿՐԿԻՆ ՎԵՐԱԳՐԵԼ */
   .image-box {
+    order: 2;
     width: 100%;
     text-align: center;
-    margin-top: auto; /* Սա կհրի նկարը ներքև */
-    padding-top: 20px; /* Տարածություն վերևից */
-    padding-bottom: 40px; /* Տարածություն ներքևից */
   }
 
   .image-box img {
-    width: 340px;
+    width: 320px;
     max-width: 90%;
     margin: 0 !important;
     display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    /* ՄԻԱՆԱԼ մաքրել բոլոր margin-ները */
   }
 
   /* CONTACT PANEL */
@@ -239,92 +233,36 @@ button:hover {
   }
 }
 
-/* Էքստրա փոքր էկրանների համար */
+/* EXTRA SMALL */
 @media (max-width: 480px) {
-  .top-bar {
-    padding: 22px 25px;
-  }
-  
   .logo img {
     height: 75px;
   }
-  
-  .social-icons a {
-    font-size: 28px;
-    margin-left: 20px;
-  }
-  
-  .main-section {
-    padding: 35px 25px 0 25px;
-    min-height: 100vh;
-  }
-  
+
   .content h1 {
-    font-size: 36px; /* ՄԵԾ տեքստ */
+    font-size: 32px;
   }
-  
+
   .content p {
-    font-size: 20px; /* ՄԵԾ տեքստ */
+    font-size: 18px;
   }
-  
-  button {
-    font-size: 20px; /* ՄԵԾ կոճակ */
-    padding: 15px 30px;
-    margin-bottom: 30px;
-  }
-  
+
   .image-box img {
     width: 300px;
-    margin: 0 !important;
-  }
-  
-  .image-box {
-    padding-top: 20px;
-    padding-bottom: 30px;
   }
 }
 
-/* Շատ փոքր էկրանների համար */
+/* VERY SMALL */
 @media (max-width: 360px) {
-  .top-bar {
-    padding: 20px 20px;
-  }
-  
   .logo img {
     height: 65px;
   }
-  
-  .social-icons a {
-    font-size: 24px;
-    margin-left: 15px;
-  }
-  
-  .main-section {
-    padding: 30px 20px 0 20px;
-    min-height: 100vh;
-  }
-  
+
   .content h1 {
-    font-size: 32px; /* ՄԵԾ տեքստ */
+    font-size: 28px;
   }
-  
-  .content p {
-    font-size: 18px; /* ՄԵԾ տեքստ */
-  }
-  
-  button {
-    font-size: 18px;
-    padding: 14px 28px;
-    margin-bottom: 25px;
-  }
-  
+
   .image-box img {
     width: 260px;
-    margin: 0 !important;
-  }
-  
-  .image-box {
-    padding-top: 15px;
-    padding-bottom: 25px;
   }
 }
