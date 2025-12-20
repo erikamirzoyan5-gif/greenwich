@@ -200,7 +200,7 @@ button:hover {
   .image-box img {
     width: 320px;
     max-width: 90%;
-    margin: 0 !important;
+    margin-top: -250px;
     display: block;
   }
 
@@ -266,3 +266,4 @@ button:hover {
     width: 260px;
   }
 }
+
