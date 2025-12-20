@@ -143,7 +143,7 @@ button:hover {
 
 /* ================== MOBILE RESPONSIVE ================== */
 @media (max-width: 768px) {
-  /* TOP BAR - շատ մեծացրել եմ */
+  /* TOP BAR - մեծացրել եմ */
   .top-bar {
     padding: 25px 30px;
   }
@@ -159,14 +159,14 @@ button:hover {
 
   /* MAIN SECTION - ամբողջովին վերափոխել եմ */
   .main-section {
-    display: block; /* flex-ը հանել եմ */
+    display: block;
     padding: 40px 30px;
   }
 
   .content {
     max-width: 100%;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   .content h1 {
@@ -187,21 +187,19 @@ button:hover {
     margin-top: 25px;
   }
 
-  /* Նկարը ամբողջությամբ ներքև */
+  /* Նկարը ամբողջությամբ ներքև - ԲԱՑԱՌԻՏԱՄԲ մաքրել եմ բոլոր margin-ները */
   .image-box {
     width: 100%;
     text-align: center;
-    padding-top: 30px;
-    border-top: 2px solid #eee;
   }
 
   .image-box img {
     width: 340px;
     max-width: 90%;
-    margin: 0;
-    margin-top: 0;
-    margin-left: 0;
+    margin: 0 !important; /* ՀԱՐՈՒՍՏ մաքրել բոլոր margin-ները */
     display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   /* CONTACT PANEL */
@@ -267,6 +265,7 @@ button:hover {
   
   .image-box img {
     width: 300px;
+    margin: 0 !important; /* Կրկին մաքրել margin-ները */
   }
 }
 
@@ -291,5 +290,6 @@ button:hover {
   
   .image-box img {
     width: 260px;
+    margin: 0 !important; /* Կրկին մաքրել margin-ները */
   }
 }
