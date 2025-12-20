@@ -34,7 +34,7 @@ body {
   opacity: 0.7;
 }
 
-/* ------------------ MAIN SECTION ------------------ */
+/* ------------------ MAIN SECTION (DESKTOP) ------------------ */
 .main-section {
   display: flex;
   justify-content: space-between;
@@ -57,18 +57,8 @@ body {
   margin-bottom: 14px;
 }
 
-.content a {
-  color: #32614D;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.content a:hover {
-  text-decoration: underline;
-}
-
 button {
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 12px 24px;
   background: #f7970f;
   border: none;
@@ -99,54 +89,18 @@ button:hover {
   color: white;
   transition: right 0.4s ease;
   z-index: 2000;
-  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-panel.open {
   right: 0;
 }
 
-.contact-content {
-  padding: 40px 30px;
-}
-
-.contact-content h2 {
-  font-size: 26px;
-  margin-bottom: 25px;
-}
-
-.contact-content p {
-  font-size: 17px;
-  margin-bottom: 16px;
-}
-
-.contact-content a {
-  color: #f7970f;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact-content a:hover {
-  text-decoration: underline;
-}
-
-.close-btn {
-  margin-top: 30px;
-  padding: 12px 22px;
-  background: #f7970f;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* ================== MOBILE RESPONSIVE ================== */
+/* ================== MOBILE (FINAL FIX) ================== */
 @media (max-width: 768px) {
 
   /* TOP BAR */
   .top-bar {
-    padding: 25px 30px;
+    padding: 25px 25px;
   }
 
   .logo img {
@@ -154,53 +108,49 @@ button:hover {
   }
 
   .social-icons a {
-    font-size: 32px;
-    margin-left: 25px;
+    font-size: 30px;
   }
 
-  /* MAIN SECTION */
+  /* 🔥 ԱՄԲՈՂՋՈՒԹՅԱՄԲ ՓՈԽՎԱԾ LAYOUT */
   .main-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 30px;
+    display: block !important;
+    padding: 40px 20px !important;
   }
 
+  /* TEXT */
   .content {
-    order: 1;
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 40px;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 35px !important;
   }
 
   .content h1 {
-    font-size: 38px;
-    line-height: 1.3;
-    margin-bottom: 25px;
+    font-size: 42px !important;
+    line-height: 1.25;
+    margin-bottom: 22px;
   }
 
   .content p {
-    font-size: 20px;
+    font-size: 22px !important;
     line-height: 1.6;
     margin-bottom: 20px;
   }
 
   button {
-    font-size: 20px;
-    padding: 15px 30px;
-    margin-top: 25px;
+    font-size: 22px;
+    padding: 16px 36px;
   }
 
+  /* IMAGE */
   .image-box {
-    order: 2;
     width: 100%;
     text-align: center;
   }
 
   .image-box img {
-    width: 320px;
-    max-width: 90%;
-    margin-top: -250px;
+    width: 90vw !important;      /* 🔥 ՄԵԾ ՆԿԱՐ */
+    max-width: 440px;
+    margin: 0 auto !important;   /* ❌ ՉԿԱ margin-top */
     display: block;
   }
 
@@ -213,57 +163,30 @@ button:hover {
   .contact-panel.open {
     right: 0;
   }
-
-  .contact-content {
-    padding: 40px 30px;
-  }
-
-  .contact-content h2 {
-    font-size: 28px;
-  }
-
-  .contact-content p {
-    font-size: 19px;
-  }
-
-  .close-btn {
-    font-size: 19px;
-    padding: 15px 30px;
-    width: 100%;
-  }
 }
 
 /* EXTRA SMALL */
 @media (max-width: 480px) {
-  .logo img {
-    height: 75px;
-  }
-
   .content h1 {
-    font-size: 32px;
+    font-size: 36px !important;
   }
 
   .content p {
-    font-size: 18px;
+    font-size: 20px !important;
   }
 
   .image-box img {
-    width: 300px;
+    max-width: 400px;
   }
 }
 
 /* VERY SMALL */
 @media (max-width: 360px) {
-  .logo img {
-    height: 65px;
-  }
-
   .content h1 {
-    font-size: 28px;
+    font-size: 32px !important;
   }
 
   .image-box img {
-    width: 260px;
+    max-width: 340px;
   }
 }
-
