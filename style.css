@@ -316,7 +316,7 @@ button:active {
     max-height: 40vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
     height: auto;
     margin-left: 220px;
-    margin-top:-80px;
+    margin-top: -70px;
     display: block;
     object-fit: contain;
   }
@@ -393,6 +393,7 @@ button:active {
     max-height: 30vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
   }
 }
+
 
 
 
