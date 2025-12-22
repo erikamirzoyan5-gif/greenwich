@@ -38,7 +38,7 @@ body {
 }
 
 .logo img {
-  height: 65px; /* 🔓 ՎԵՐԱԴԱՐՁՆԵԼ ԵՄ HEIGHT-Ը */
+  height: 90px; /* 🔓 ՎԵՐԱԴԱՐՁՆԵԼ ԵՄ HEIGHT-Ը */
   width: auto; /* 🔓 WIDTH-Ը ԿԱՐԳԱՎՈՐՎԵԼՈՒ Է ԱՎՏՈՄԱՏ */
   object-fit: contain; /* 🔓 ՊԱՀՊԱՆԵԼՈՒ Է ՊՐՈՊՈՐՍԻԱՆԵՐԸ */
 }
@@ -247,3 +247,4 @@ button:hover {
     max-height: 35vh;
   }
 }
+
