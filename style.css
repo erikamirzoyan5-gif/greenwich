@@ -1,4 +1,6 @@
 * {
+You said:
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -115,6 +117,7 @@ button:hover {
 
   .logo img {
     height: 56px;
+    margin-top:-190px;
   }
 
   .social-icons a {
