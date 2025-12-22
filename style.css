@@ -46,9 +46,9 @@ body {
   display: block;
 }
 
-/* 🔓 ՍՈՑԻԱԼԻ ԻԿՈՆՆԵՐ - ՍՊԻՏԱԿ */
+/* ՍՈՑԻԱԼԻ ԻԿՈՆՆԵՐ */
 .social-icons a {
-  color: white; /* 🔓 ՍՊԻՏԱԿ */
+  color: white;
   font-size: 28px;
   margin-left: 20px;
   text-decoration: none;
@@ -57,7 +57,7 @@ body {
 }
 
 .social-icons a:hover {
-  color: #faa002; /* 🔓 ՀՈՎԵՐՈՒՄ ՆԱՐՆՋԱԳՈՒՅՆ */
+  color: #faa002;
   transform: translateY(-3px) scale(1.1);
 }
 
@@ -89,9 +89,9 @@ body {
   line-height: 1.6;
 }
 
-/* 🔓 TG ՀՂՈՒՄԸ - ԳՈՒՅՆԱՎՈՐ ՏԵՔՍՏ */
+/* TG ՀՂՈՒՄԸ */
 .content a {
-  color: #faa002; /* 🔓 ՏԵՔՍՏԸ ՆԱՐՆՋԱԳՈՒՅՆ */
+  color: #faa002;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -99,7 +99,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* 🔓 ՀՈՎԵՐ ԷՖԵԿՏ ԳԾԻՑ */
 .content a::after {
   content: '';
   position: absolute;
@@ -114,7 +113,7 @@ body {
 }
 
 .content a:hover {
-  color: #ffb733; /* 🔓 ՄՈՒԿ ՆԱՐՆՋԱԳՈՒՅՆ */
+  color: #ffb733;
 }
 
 .content a:hover::after {
@@ -122,13 +121,7 @@ body {
   transform-origin: left;
 }
 
-/* 🔓 ԵՐԿՐՈՐԴ ՏԱՐԲԵՐԱԿ ՀՈՎԵՐԻ ՀԱՄԱՐ */
-/* .content a:hover {
-  color: #ffb733;
-  text-shadow: 0 2px 8px rgba(250, 160, 2, 0.3);
-} */
-
-/* ================= BUTTON ================= */
+/* BUTTON */
 button {
   margin-top: 25px;
   padding: 15px 35px;
@@ -189,7 +182,6 @@ button:active {
   right: 0;
 }
 
-/* 🔓 CONTACT PANEL-Ի ՀՂՈՒՄՆԵՐ */
 .contact-panel a {
   color: #faa002;
   text-decoration: none;
@@ -236,11 +228,13 @@ button:active {
 @media (max-width: 768px) {
   /* HEADER */
   .top-bar {
-    padding: 8px 20px;
+    padding: 8px 16px; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ PADDING-Ը */
     min-height: 65px;
   }
 
+  /* 🔓 ԼՈԳՈՆ - ՄԻ ՔԻՉ ՁԱԽ */
   .logo {
+    margin-left: -12px; /* 🔓 ԱՎԵԼԻ ՁԱԽ */
     height: 75px;
   }
 
@@ -252,11 +246,11 @@ button:active {
   .social-icons a {
     font-size: 24px;
     margin-left: 15px;
-    color: white; /* 🔓 ՍՊԻՏԱԿ MOBILE-ՈՒՄ */
+    color: white;
   }
 
   .social-icons a:hover {
-    color: #faa002; /* 🔓 ՀՈՎԵՐՈՒՄ ՆԱՐՆՋԱԳՈՒՅՆ */
+    color: #faa002;
   }
 
   /* MAIN */
@@ -264,20 +258,23 @@ button:active {
     flex-direction: column;
     padding: 15px 16px 0 16px !important;
     min-height: calc(100vh - 65px);
+    justify-content: flex-start; /* 🔓 ՍԿՍՎԵԼ ՎԵՐԵՎԻՑ */
   }
 
   .content {
     max-width: 100% !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important; /* 🔓 ԱՎԵԼԱՑՐԵԼ ԵՄ MARGIN-Ը */
     text-align: center;
   }
 
   .content h1 {
     font-size: 34px !important;
+    margin-bottom: 15px;
   }
 
   .content p {
     font-size: 18px !important;
+    margin-bottom: 12px;
   }
 
   /* TG ՀՂՈՒՄ MOBILE-ՈՒՄ */
@@ -296,18 +293,24 @@ button:active {
     margin: 15px auto 0;
   }
 
-  /* IMAGE */
+  /* 🔓 ՆԿԱՐԻ ՄԱՍ - ԿԵՆՏՐՈՆ ՈՒ ՎԵՐ */
   .image-box {
     position: relative;
     width: 100%;
-    margin-top: auto;
-    padding-bottom: 15px;
+    margin-top: 20px !important; /* 🔓 ՎԵՐ ԲԱՐՁՐԱՑՆԵԼ */
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center; /* 🔓 ԿԵՆՏՐՈՆ */
+    align-items: center; /* 🔓 ԿԵՆՏՐՈՆ */
+    height: auto;
   }
 
   .image-box img {
-    width: 75vw !important;
-    max-width: 320px;
-    max-height: 45vh;
+    width: 70vw !important; /* 🔓 ՓՈՔՐԱՑՐԵԼ */
+    max-width: 300px;
+    max-height: 50vh; /* 🔓 ԲԱՐՁՐՈՒԹՅՈՒՆԸ ՄԵԾԱՑՐԵԼ */
+    margin: 0 auto !important;
+    display: block;
   }
 
   /* CONTACT PANEL MOBILE */
@@ -328,6 +331,12 @@ button:active {
     font-size: 17px !important;
   }
 
+  /* 🔓 ԼՈԳՈՆ - ԷԼ ԱՎԵԼԻ ՁԱԽ */
+  .logo {
+    margin-left: -15px;
+    height: 70px;
+  }
+
   .logo img {
     height: 70px;
   }
@@ -336,8 +345,15 @@ button:active {
     font-size: 22px;
   }
 
-  .content a {
-    font-size: inherit;
+  /* 🔓 ՆԿԱՐԸ - ԷԼ ԱՎԵԼԻ ՎԵՐ */
+  .image-box {
+    margin-top: 15px !important;
+  }
+
+  .image-box img {
+    width: 75vw !important;
+    max-width: 280px;
+    max-height: 45vh;
   }
 }
 
@@ -347,6 +363,11 @@ button:active {
     font-size: 30px !important;
   }
 
+  .logo {
+    margin-left: -18px; /* 🔓 ՄԻ ՔԻՉ ԵՍ ԷԼ ՁԱԽ */
+    height: 65px;
+  }
+
   .logo img {
     height: 65px;
   }
@@ -354,5 +375,10 @@ button:active {
   .social-icons a {
     font-size: 20px;
     margin-left: 12px;
+  }
+
+  .image-box img {
+    max-width: 260px;
+    max-height: 40vh;
   }
 }
