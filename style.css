@@ -315,7 +315,8 @@ button:active {
     max-width: 260px; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
     max-height: 40vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
     height: auto;
-    margin-left: 200px;
+    margin-left: 250px;
+    margin-top:-50px;
     display: block;
     object-fit: contain;
   }
@@ -392,6 +393,7 @@ button:active {
     max-height: 30vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
   }
 }
+
 
 
 
