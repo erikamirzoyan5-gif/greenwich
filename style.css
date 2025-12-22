@@ -1,43 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  width: 100%;
+  background: #32614D;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: 70px;
+}
+
+/* ԼՈԳՈՆ */
+.logo {
+  margin-left: -6px;
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ՍՈՑԻԱԼԻ ԻԿՈՆՆԵՐ */
+.social-icons a {
+  color: white;
+  font-size: 28px;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: #faa002;
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* ================= MAIN SECTION ================= */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 120px 0 120px;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  max-width: 50%;
+  margin-top: 20px;
+}
+
+.content h1 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #32614D;
+}
+
+.content p {
+  font-size: 20px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+/* TG ՀՂՈՒՄԸ */
+.content a {
+  color: #faa002;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 0 2px;
+  transition: all 0.3s ease;
+}
+
+.content a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #faa002;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.content a:hover {
+  color: #ffb733;
+}
+
+.content a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* BUTTON */
+button {
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: #faa002;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 0 #d18b02;
+}
+
+button:hover {
+  background-color: #ffb733;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #d18b02;
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 #d18b02;
+}
+
+/* ՆԿԱՐԻ ՄԱՍ */
+.image-box {
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  height: calc(100vh - 120px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.image-box img {
+  width: 420px;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+/* ================= CONTACT PANEL ================= */
+.contact-panel {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 360px;
+  height: 100%;
+  background: #32614D;
+  color: white;
+  transition: right 0.4s ease;
+  z-index: 2000;
+  padding: 40px 30px;
+}
+
+.contact-panel.open {
+  right: 0;
+}
+
+.contact-panel a {
+  color: #faa002;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px dashed #faa002;
+  padding-bottom: 1px;
+  transition: all 0.2s ease;
+}
+
+.contact-panel a:hover {
+  color: #ffcc66;
+  border-bottom: 1px solid #ffcc66;
+}
+
+.contact-panel h2 {
+  color: #faa002;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.contact-panel p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.close-btn {
+  margin-top: 30px;
+  background: #faa002;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #ffb733;
+}
+
 /* ================= 📱 MOBILE ================= */
 @media (max-width: 768px) {
-  /* ... նախորդ կոդը ... */
+  /* HEADER */
+  .top-bar {
+    padding: 8px 16px;
+    min-height: 65px;
+  }
+
+  /* ԼՈԳՈՆ - ՁԱԽ */
+  .logo {
+    margin-left: -12px;
+    height: 75px;
+  }
+
+  .logo img {
+    height: 75px;
+    margin-top: 0 !important;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin-left: 15px;
+    color: white;
+  }
+
+  .social-icons a:hover {
+    color: #faa002;
+  }
+
+  /* MAIN */
+  .main-section {
+    flex-direction: column;
+    padding: 15px 16px 20px 16px !important;
+    min-height: calc(100vh - 65px);
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .content {
+    max-width: 100% !important;
+    margin-bottom: 25px !important;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 34px !important;
+    margin-bottom: 15px;
+  }
+
+  .content p {
+    font-size: 18px !important;
+    margin-bottom: 12px;
+  }
+
+  /* TG ՀՂՈՒՄ */
+  .content a {
+    color: #faa002;
+  }
+
+  .content a:hover {
+    color: #ffb733;
+  }
+
+  /* BUTTON */
+  .content button {
+    padding: 14px 30px;
+    font-size: 18px;
+    margin: 15px auto 20px;
+    display: block;
+  }
 
   /* 🔓 ՆԿԱՐԻ ՄԱՍ - ՓՈՔՐԱՑՆԵԼ ՈՒ ԿԵՆՏՐՈՆԱՑՆԵԼ */
   .image-box {
     position: relative !important;
     width: 100%;
-    margin: 15px auto 0 !important; /* Կենտրոնացնելու և վերևից բաց թողնելու համար */
+    margin: 15px auto 0 !important;
     padding-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     order: 3;
-    max-height: 50vh; /* 🔓 Առավելագույն բարձրություն սահմանել */
+    max-height: 50vh;
   }
 
   .image-box img {
-    width: 75vw !important; /* 🔓 Փոքրացնել լայնությունը */
-    max-width: 280px; /* 🔓 Առավելագույն լայնություն */
-    max-height: 45vh; /* 🔓 Առավելագույն բարձրություն */
+    width: 75vw !important;
+    max-width: 280px;
+    max-height: 45vh;
     height: auto;
     margin: 0 auto !important;
     display: block;
     object-fit: contain;
   }
 
-  /* ... մնացած կոդը ... */
+  /* CONTACT PANEL MOBILE */
+  .contact-panel {
+    width: 100%;
+    right: -100%;
+    padding: 30px 20px;
+  }
 }
 
 /* ================= EXTRA SMALL ================= */
 @media (max-width: 480px) {
-  /* ... նախորդ կոդը ... */
+  .content h1 {
+    font-size: 32px !important;
+  }
+
+  .content p {
+    font-size: 17px !important;
+  }
+
+  /* ԼՈԳՈՆ */
+  .logo {
+    margin-left: -15px;
+    height: 70px;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+
+  .social-icons a {
+    font-size: 22px;
+  }
 
   /* ՆԿԱՐԸ */
   .image-box img {
     width: 80vw !important;
-    max-width: 250px; /* 🔓 Ավելի փոքր առավելագույն լայնություն */
-    max-height: 40vh; /* 🔓 Ավելի փոքր առավելագույն բարձրություն */
+    max-width: 250px;
+    max-height: 40vh;
   }
   
   /* 🔓 ԿՈՊՉԱՅԻ MARGIN */
@@ -48,10 +366,26 @@
 
 /* ================= VERY SMALL ================= */
 @media (max-width: 360px) {
-  /* ... նախորդ կոդը ... */
+  .content h1 {
+    font-size: 30px !important;
+  }
+
+  .logo {
+    margin-left: -18px;
+    height: 65px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin-left: 12px;
+  }
 
   .image-box img {
-    max-width: 220px; /* 🔓 Էլ ավելի փոքր */
+    max-width: 220px;
     max-height: 35vh;
   }
 }
