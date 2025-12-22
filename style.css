@@ -30,7 +30,7 @@ body {
   flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ - ՊՐՈՊՈՐՍԻԱՆԱԼ */
+/* ԼՈԳՈՆ */
 .logo {
   margin-left: -6px;
   display: flex;
@@ -38,9 +38,9 @@ body {
 }
 
 .logo img {
-  height: 90px; /* 🔓 ՎԵՐԱԴԱՐՁՆԵԼ ԵՄ HEIGHT-Ը */
-  width: auto; /* 🔓 WIDTH-Ը ԿԱՐԳԱՎՈՐՎԵԼՈՒ Է ԱՎՏՈՄԱՏ */
-  object-fit: contain; /* 🔓 ՊԱՀՊԱՆԵԼՈՒ Է ՊՐՈՊՈՐՍԻԱՆԵՐԸ */
+  height: 65px;
+  width: auto;
+  object-fit: contain;
 }
 
 .social-icons a {
@@ -98,7 +98,7 @@ button:hover {
   opacity: 0.9;
 }
 
-/* ՆԿԱՐԻ ՄԱՍ */
+/* 🔓 ՆԿԱՐԻ ՄԱՍ - 90px ԲԱՐՁՐՈՒԹՅԱՄԲ */
 .image-box {
   position: absolute;
   right: 120px;
@@ -109,10 +109,11 @@ button:hover {
 }
 
 .image-box img {
-  width: 420px;
-  height: auto;
-  max-height: 85vh;
-  object-fit: contain;
+  width: auto; /* 🔓 ԼԱՅՆՈՒԹՅՈՒՆԸ ԿԱՐԳԱՎՈՐՎԵԼՈՒ Է ԱՎՏՈՄԱՏ */
+  height: 90px; /* 🔓 ՀԻՄՆԱԿԱՆ ՓՈՓՈԽՈՒԹՅՈՒՆ - ՄՍՏԱՆՈՒՄ Է 90px */
+  min-height: 90px; /* 🔓 ՆՎԱԶԵԼՈՒ Է 90px-ՈՒՄ */
+  max-height: 90px; /* 🔓 ԲԱՐՁՐԱՑՆԵԼՈՒ Է 90px-ՈՒՄ */
+  object-fit: contain; /* 🔓 ՊԱՀՊԱՆԵԼՈՒ Է ՊՐՈՊՈՐՍԻԱՆԵՐԸ */
 }
 
 /* ================= CONTACT PANEL ================= */
@@ -140,7 +141,7 @@ button:hover {
   }
 
   .logo img {
-    height: 55px; /* 🔓 ՄՈԲԱՅԼՈՒՄ ԷԼ ԲԱՐՁՐ */
+    height: 55px;
     width: auto;
     object-fit: contain;
     margin-top: 0 !important;
@@ -185,7 +186,7 @@ button:hover {
     margin: 15px auto 0;
   }
 
-  /* IMAGE */
+  /* 🔓 MOBILE-ՈՒՄ ՆԿԱՐԸ - 90px */
   .image-box {
     position: relative;
     right: auto;
@@ -200,10 +201,13 @@ button:hover {
   }
 
   .image-box img {
-    width: 75vw !important;
-    max-width: 320px;
-    max-height: 45vh;
+    width: auto !important; /* 🔓 ԼԱՅՆՈՒԹՅՈՒՆԸ ԱՎՏՈՄԱՏ */
+    height: 90px; /* 🔓 ՆՈՒՅՆ 90px MOBILE-ՈՒՄ */
+    min-height: 90px;
+    max-height: 90px;
+    max-width: 80vw; /* 🔓 ՈՐ ՉԴՈՒՐ ԳԱ ԷԿՐԱՆԻՑ */
     margin: 0 auto !important;
+    object-fit: contain;
   }
 }
 
@@ -218,7 +222,7 @@ button:hover {
   }
 
   .logo img {
-    height: 50px; /* 🔓 EXTRA SMALL-ՈՒՄ */
+    height: 50px;
   }
 
   .top-bar {
@@ -226,9 +230,7 @@ button:hover {
   }
 
   .image-box img {
-    width: 80vw !important;
-    max-width: 280px;
-    max-height: 40vh;
+    max-width: 75vw; /* 🔓 ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
   }
 }
 
@@ -239,12 +241,10 @@ button:hover {
   }
 
   .logo img {
-    height: 45px; /* 🔓 VERY SMALL-ՈՒՄ */
+    height: 45px;
   }
 
   .image-box img {
-    max-width: 260px;
-    max-height: 35vh;
+    max-width: 70vw; /* 🔓 ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
   }
 }
-
