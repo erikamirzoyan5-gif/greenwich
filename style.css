@@ -228,13 +228,13 @@ button:active {
 @media (max-width: 768px) {
   /* HEADER */
   .top-bar {
-    padding: 8px 16px; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ PADDING-Ը */
+    padding: 8px 16px;
     min-height: 65px;
   }
 
-  /* 🔓 ԼՈԳՈՆ - ՄԻ ՔԻՉ ՁԱԽ */
+  /* ԼՈԳՈՆ - ՁԱԽ */
   .logo {
-    margin-left: -12px; /* 🔓 ԱՎԵԼԻ ՁԱԽ */
+    margin-left: -12px;
     height: 75px;
   }
 
@@ -256,14 +256,15 @@ button:active {
   /* MAIN */
   .main-section {
     flex-direction: column;
-    padding: 15px 16px 0 16px !important;
+    padding: 15px 16px 20px 16px !important; /* 🔓 ԱՎԵԼԱՑՐԵԼ ԵՄ ՍՏՈՐԵՎԻ PADDING */
     min-height: calc(100vh - 65px);
-    justify-content: flex-start; /* 🔓 ՍԿՍՎԵԼ ՎԵՐԵՎԻՑ */
+    justify-content: flex-start;
+    overflow-y: auto; /* 🔓 ՍՔՐՈԼ ԵԹԵ ԱՎԵԼԻ ՄԵԾ Է */
   }
 
   .content {
     max-width: 100% !important;
-    margin-bottom: 20px !important; /* 🔓 ԱՎԵԼԱՑՐԵԼ ԵՄ MARGIN-Ը */
+    margin-bottom: 25px !important; /* 🔓 ԱՎԵԼԻ ՄԵԾ MARGIN ՆԿԱՐԻ ՀԱՄԱՐ */
     text-align: center;
   }
 
@@ -277,7 +278,7 @@ button:active {
     margin-bottom: 12px;
   }
 
-  /* TG ՀՂՈՒՄ MOBILE-ՈՒՄ */
+  /* TG ՀՂՈՒՄ */
   .content a {
     color: #faa002;
   }
@@ -290,25 +291,27 @@ button:active {
   .content button {
     padding: 14px 30px;
     font-size: 18px;
-    margin: 15px auto 0;
+    margin: 15px auto 20px; /* 🔓 ԱՎԵԼԱՑՐԵԼ ԵՄ ՆԵՐՔԵՎԻ MARGIN */
+    display: block;
   }
 
-  /* 🔓 ՆԿԱՐԻ ՄԱՍ - ԿԵՆՏՐՈՆ ՈՒ ՎԵՐ */
+  /* 🔓 ՆԿԱՐԻ ՄԱՍ - ՄԵՋՏԵՂՈՒՄ ՈՒ ՏԵՔՍՏԻ ՏԱԿ */
   .image-box {
-    position: relative;
+    position: relative !important;
     width: 100%;
-    margin-top: 20px !important; /* 🔓 ՎԵՐ ԲԱՐՁՐԱՑՆԵԼ */
-    padding-bottom: 20px;
+    margin-top: 0 !important; /* 🔓 ՎԵՐԱԴԱՐՁՐԵԼ ԵՄ */
+    padding-bottom: 0;
     display: flex;
-    justify-content: center; /* 🔓 ԿԵՆՏՐՈՆ */
-    align-items: center; /* 🔓 ԿԵՆՏՐՈՆ */
+    justify-content: center;
+    align-items: center;
     height: auto;
+    order: 3; /* 🔓 ՀԱՄԱՁԱՅՆ HTML ԿԱՌՈՒՑՎԱԾՔԻՆ */
   }
 
   .image-box img {
-    width: 70vw !important; /* 🔓 ՓՈՔՐԱՑՐԵԼ */
-    max-width: 300px;
-    max-height: 50vh; /* 🔓 ԲԱՐՁՐՈՒԹՅՈՒՆԸ ՄԵԾԱՑՐԵԼ */
+    width: 80vw !important; /* 🔓 ՄԵԾԱՑՐԵԼ ԵՄ */
+    max-width: 320px;
+    max-height: 45vh;
     margin: 0 auto !important;
     display: block;
   }
@@ -331,7 +334,7 @@ button:active {
     font-size: 17px !important;
   }
 
-  /* 🔓 ԼՈԳՈՆ - ԷԼ ԱՎԵԼԻ ՁԱԽ */
+  /* ԼՈԳՈՆ */
   .logo {
     margin-left: -15px;
     height: 70px;
@@ -345,15 +348,16 @@ button:active {
     font-size: 22px;
   }
 
-  /* 🔓 ՆԿԱՐԸ - ԷԼ ԱՎԵԼԻ ՎԵՐ */
-  .image-box {
-    margin-top: 15px !important;
-  }
-
+  /* ՆԿԱՐԸ */
   .image-box img {
-    width: 75vw !important;
+    width: 85vw !important;
     max-width: 280px;
-    max-height: 45vh;
+    max-height: 40vh;
+  }
+  
+  /* 🔓 ԿՈՊՉԱՅԻ MARGIN */
+  .content button {
+    margin: 15px auto 15px;
   }
 }
 
@@ -364,7 +368,7 @@ button:active {
   }
 
   .logo {
-    margin-left: -18px; /* 🔓 ՄԻ ՔԻՉ ԵՍ ԷԼ ՁԱԽ */
+    margin-left: -18px;
     height: 65px;
   }
 
@@ -379,6 +383,6 @@ button:active {
 
   .image-box img {
     max-width: 260px;
-    max-height: 40vh;
+    max-height: 35vh;
   }
 }
