@@ -7,6 +7,9 @@
 body {
   font-family: Arial, sans-serif;
   background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ================= TOP BAR ================= */
@@ -17,26 +20,33 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ ՄԻ ՔԻՉ ՁԱԽ */
+/* 🔥 ԼՈԳՈՆ ԱՎԵԼԻ ՄԵԾ */
 .logo {
-  margin-left: -6px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  height: 0px;
+  height: 70px; /* 🔥 Մեծացրել եմ բարձրությունը */
+  width: auto;
 }
 
+/* 🔥 ԿԱՊՈՒՅՏ ՀՂՈՒՄ */
 .social-icons a {
-  color: white;
+  color: #0066cc; /* 🔓 Կապույտ գույն */
   font-size: 22px;
   margin-left: 14px;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-  opacity: 0.7;
+  color: #004499; /* 🔓 Մուգ կապույտ հովերվելիս */
+  transform: translateY(-2px);
 }
 
 /* ================= MAIN SECTION (DESKTOP) ================= */
@@ -45,6 +55,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 140px 120px;
+  flex: 1;
 }
 
 .content {
@@ -60,6 +71,17 @@ body {
 .content p {
   font-size: 18px;
   margin-bottom: 14px;
+}
+
+/* 🔓 ԿԱՊՈՒՅՏ ՀՂՈՒՄ ՀԻՄՆԱԿԱՆ ԲՈՎԱՆԴԱԿՈՒՄ */
+.content a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content a:hover {
+  text-decoration: underline;
 }
 
 /* ================= BUTTON ================= */
@@ -78,10 +100,17 @@ button:hover {
   opacity: 0.9;
 }
 
+/* 🔥 ՆԿԱՐԸ ԿՊԱԾ ԷԿՐԱՆԻ ՆԵՐՔԵՎԻ ՄԱՍԻՆ */
+.image-box {
+  display: flex;
+  align-items: flex-end; /* 🔓 Նկարը կցվում է ներքևի մասին */
+  height: 100%;
+}
+
 .image-box img {
   width: 400px;
-  margin-left: 40px;
-  margin-top: -190px;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* ================= CONTACT PANEL ================= */
@@ -101,6 +130,15 @@ button:hover {
   right: 0;
 }
 
+/* 🔥 ԿԱՆԱՉ ԳՈՒՅՆԻ ՎԵՐՅԱԿԱ ՊԱՏՐԱՍՏՎԱԾ ԲԱՆ */
+.content .highlight {
+  color: #28a745; /* Կանաչ գույն */
+  background-color: rgba(40, 167, 69, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
 /* ================= 📱 MOBILE (FINAL BALANCED VERSION) ================= */
 @media (max-width: 768px) {
 
@@ -110,22 +148,25 @@ button:hover {
   }
 
   .logo {
-    margin-left: -8px; /* 🔥 մի քիչ էլ ձախ */
+    margin-left: 0;
   }
 
   .logo img {
-    height: 56px;
+    height: 60px; /* 🔓 Մեծացրել եմ մոբայլ տարբերակում */
   }
 
   .social-icons a {
     font-size: 21px;
     margin-left: 12px;
+    color: #0066cc; /* 🔓 Կապույտ գույն մոբայլում */
   }
 
   /* MAIN */
   .main-section {
-    display: block !important;
+    display: flex;
+    flex-direction: column;
     padding: 24px 16px !important;
+    min-height: calc(100vh - 80px); /* 🔓 Ունենալու է բավարար բարձրություն */
   }
 
   /* TEXT */
@@ -133,7 +174,7 @@ button:hover {
     max-width: 100% !important;
     width: 100% !important;
     margin-bottom: 18px !important;
-    text-align: center; /* 🔥 ԿՈՃԱԿԸ ԿԵՆՏՐՈՆ */
+    text-align: center;
   }
 
   .content h1 {
@@ -158,6 +199,8 @@ button:hover {
   .image-box {
     width: 100%;
     text-align: center;
+    margin-top: auto; /* 🔓 Պատկերը մղում էք ներքև */
+    padding-bottom: 20px;
   }
 
   /* 🔥 ՆԿԱՐԸ ՄԻ ՔԻՉ ՓՈՔՐ */
@@ -189,6 +232,10 @@ button:hover {
     font-size: 16px !important;
   }
 
+  .logo img {
+    height: 55px; /* 🔓 Մեծացրել եմ փոքր էկրանների համար */
+  }
+
   .image-box img {
     max-width: 280px;
   }
@@ -200,8 +247,11 @@ button:hover {
     font-size: 27px !important;
   }
 
+  .logo img {
+    height: 50px; /* 🔓 Մեծացրել եմ շատ փոքր էկրանների համար */
+  }
+
   .image-box img {
     max-width: 260px;
   }
 }
-
