@@ -1,14 +1,22 @@
 * {
-You said:
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
 }
 
 /* ================= TOP BAR ================= */
@@ -19,15 +27,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ ՄԻ ՔԻՉ ՁԱԽ */
+/* 🔥 ԼՈԳՈՆ - ԱՅՍ ԱՆՀՐԱԺԵՇՏ ՓՈՓՈԽԵԼ */
 .logo {
   margin-left: -6px;
 }
 
 .logo img {
-  height: 0px;
+  height: 50px; /* 🔓 ՀԱՍՏԱՏ ԼՈԳՈՅԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
 }
 
 .social-icons a {
@@ -46,7 +55,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 140px 120px;
+  padding: 100px 120px; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ PADDING-Ը, ՈՐ ՆԿԱՐԸ ՆԵՐՔԵՎ ԻՇՆԻ */
+  flex: 1;
+  overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
 }
 
 .content {
@@ -80,10 +91,19 @@ button:hover {
   opacity: 0.9;
 }
 
+/* 🔓 ՆԿԱՐԻ ԴԻՐՔԸ - ԿԱՐԵՎՈՐ ՄԱՍ */
+.image-box {
+  display: flex;
+  align-items: flex-end; /* 🔓 ՆԿԱՐԸ ՆԵՐՔԵՎԻՑ Է ՍԿՍՎՈՒՄ */
+  justify-content: flex-end;
+  height: 100%;
+}
+
 .image-box img {
   width: 400px;
-  margin-left: 40px;
-  margin-bottom: 60px;
+  max-height: 70vh; /* 🔓 ՆԿԱՐԻ ՄԱՔՍԻՄՈՒՄ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+  object-fit: contain;
+  margin-bottom: 0; /* 🔓 ՆԵՐՔԵՎԻՑ ՀԵՌԱՎՈՐՈՒԹՅՈՒՆ ՉԿԱ */
 }
 
 /* ================= CONTACT PANEL ================= */
@@ -105,19 +125,18 @@ button:hover {
 
 /* ================= 📱 MOBILE (FINAL BALANCED VERSION) ================= */
 @media (max-width: 768px) {
-
   /* HEADER */
   .top-bar {
     padding: 10px 14px;
   }
 
   .logo {
-    margin-left: -8px; /* 🔥 մի քիչ էլ ձախ */
+    margin-left: -8px;
   }
 
   .logo img {
-    height: 56px;
-    margin-top:-190px;
+    height: 46px; /* 🔓 ՄՈԲԱՅԼՈՒՄ ԼՈԳՈՅԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+    margin-top: 0 !important; /* 🔓 ԿԱՐԵՎՈՐ: ՄԵՋՆԱԿԱՆ MARGIN-Ը ՀԱՆԵԼ */
   }
 
   .social-icons a {
@@ -127,48 +146,58 @@ button:hover {
 
   /* MAIN */
   .main-section {
-    display: block !important;
-    padding: 24px 16px !important;
+    display: flex !important; /* 🔓 ՓՈՓՈԽԵԼ ԵՄ BLOCK-ԻՑ FLEX */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px !important;
+    min-height: calc(100vh - 70px);
+    overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
   }
 
   /* TEXT */
   .content {
     max-width: 100% !important;
     width: 100% !important;
-    margin-bottom: 18px !important;
-    text-align: center; /* 🔥 ԿՈՃԱԿԸ ԿԵՆՏՐՈՆ */
+    margin-bottom: 10px !important; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ MARGIN-Ը */
+    text-align: center;
   }
 
   .content h1 {
     font-size: 31px !important;
     line-height: 1.25;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .content p {
     font-size: 16.5px !important;
     line-height: 1.55;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   /* 🔥 CONTACT US BUTTON ԿԵՆՏՐՈՆ */
   .content button {
     display: inline-block;
-    margin: 14px auto 0;
+    margin: 10px auto 0;
   }
 
   /* IMAGE */
   .image-box {
     width: 100%;
     text-align: center;
+    margin-top: auto; /* 🔓 ԿԱՐԵՎՈՐ: ՊԱՏԿԵՐԸ ՆԵՐՔԵՎ ԿՄՂԻ */
+    padding-bottom: 20px; /* 🔓 ՆԵՐՔԵՎԻՑ ՀԵՌԱՎՈՐՈՒԹՅՈՒՆ */
+    max-height: 50vh; /* 🔓 ՄԱՔՍԻՄՈՒՄ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+    overflow: hidden;
   }
 
-  /* 🔥 ՆԿԱՐԸ ՄԻ ՔԻՉ ՓՈՔՐ */
+  /* 🔥 ՆԿԱՐԸ */
   .image-box img {
     width: 70vw !important;
     max-width: 300px;
+    max-height: 45vh; /* 🔓 ՄՈԲԱՅԼՈՒՄ ՊԱՏԿԵՐԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
     margin: 0 auto !important;
     display: block;
+    object-fit: contain;
   }
 
   /* CONTACT PANEL */
@@ -194,6 +223,11 @@ button:hover {
 
   .image-box img {
     max-width: 280px;
+    max-height: 40vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
+  }
+  
+  .logo img {
+    height: 42px; /* 🔓 ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ ԼՈԳՈՅԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
   }
 }
 
@@ -205,7 +239,10 @@ button:hover {
 
   .image-box img {
     max-width: 260px;
+    max-height: 35vh; /* 🔓 ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
+  }
+  
+  .logo img {
+    height: 38px; /* 🔓 ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
   }
 }
-
-
