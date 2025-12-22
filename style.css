@@ -7,41 +7,29 @@
 body {
   font-family: Arial, sans-serif;
   background: #ffffff;
-  overflow: hidden; /* 🔥 scroll չկա */
 }
 
 /* ================= TOP BAR ================= */
 .top-bar {
   width: 100%;
-  background: #ffffff;
-  padding: 20px 40px;
+  background: #32614D;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
 }
 
-/* ================= LOGO ================= */
+/* 🔥 ԼՈԳՈՆ ՄԻ ՔԻՉ ՁԱԽ */
 .logo {
-  display: flex;
-  align-items: center;
+  margin-left: -6px;
 }
 
 .logo img {
-  height: 80px; /* 🔥 մեծ լոգո */
-  margin-right: 12px;
+  height: 0px;
 }
 
-.logo-text {
-  font-size: 34px;
-  font-weight: bold;
-  color: #1E90FF; /* 🔥 կապույտ */
-}
-
-/* ================= SOCIAL ICONS ================= */
 .social-icons a {
-  color: #333;
+  color: white;
   font-size: 22px;
   margin-left: 14px;
   text-decoration: none;
@@ -51,55 +39,169 @@ body {
   opacity: 0.7;
 }
 
-/* ================= MAIN IMAGE ================= */
-.image-box {
-  position: fixed;
-  bottom: 0; /* 🔥 կպած էկրանի ներքևին */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  z-index: -1;
+/* ================= MAIN SECTION (DESKTOP) ================= */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 120px;
+}
+
+.content {
+  max-width: 50%;
+}
+
+.content h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #32614D;
+}
+
+.content p {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  margin-top: 14px;
+  padding: 12px 26px;
+  background: #f7970f;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 .image-box img {
-  max-width: 90%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  width: 400px;
+  margin-left: 40px;
+  margin-top: -190px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= CONTACT PANEL ================= */
+.contact-panel {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 360px;
+  height: 100%;
+  background: #32614D;
+  color: white;
+  transition: right 0.4s ease;
+  z-index: 2000;
+}
+
+.contact-panel.open {
+  right: 0;
+}
+
+/* ================= 📱 MOBILE (FINAL BALANCED VERSION) ================= */
 @media (max-width: 768px) {
+
+  /* HEADER */
   .top-bar {
-    padding: 14px 18px;
+    padding: 10px 14px;
+  }
+
+  .logo {
+    margin-left: -8px; /* 🔥 մի քիչ էլ ձախ */
   }
 
   .logo img {
-    height: 60px;
+    height: 56px;
   }
 
-  .logo-text {
-    font-size: 28px;
+  .social-icons a {
+    font-size: 21px;
+    margin-left: 12px;
   }
 
+  /* MAIN */
+  .main-section {
+    display: block !important;
+    padding: 24px 16px !important;
+  }
+
+  /* TEXT */
+  .content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 18px !important;
+    text-align: center; /* 🔥 ԿՈՃԱԿԸ ԿԵՆՏՐՈՆ */
+  }
+
+  .content h1 {
+    font-size: 31px !important;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .content p {
+    font-size: 16.5px !important;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  /* 🔥 CONTACT US BUTTON ԿԵՆՏՐՈՆ */
+  .content button {
+    display: inline-block;
+    margin: 14px auto 0;
+  }
+
+  /* IMAGE */
+  .image-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 🔥 ՆԿԱՐԸ ՄԻ ՔԻՉ ՓՈՔՐ */
   .image-box img {
-    max-width: 80%;
+    width: 70vw !important;
+    max-width: 300px;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  /* CONTACT PANEL */
+  .contact-panel {
+    width: 100%;
+    right: -100%;
+  }
+
+  .contact-panel.open {
+    right: 0;
   }
 }
 
-/* ================= SMALL MOBILE ================= */
+/* ================= EXTRA SMALL ================= */
 @media (max-width: 480px) {
-  .logo img {
-    height: 50px;
+  .content h1 {
+    font-size: 29px !important;
   }
 
-  .logo-text {
-    font-size: 24px;
+  .content p {
+    font-size: 16px !important;
   }
 
   .image-box img {
-    max-width: 70%;
+    max-width: 280px;
   }
 }
 
+/* ================= VERY SMALL ================= */
+@media (max-width: 360px) {
+  .content h1 {
+    font-size: 27px !important;
+  }
+
+  .image-box img {
+    max-width: 260px;
+  }
+}
+ այնպես արա որ լոգոն մեծացնես հիդեռի տեքստում որ գրվածա տգ ու կապույտ լինկա դրած դրան ինչ ոչ հետաքրքիր բան տուր կանաչով տենց գեղեցիկ չի կապույտ ու նկարնել թող նեքևի մասը կպած լինի էկրանի ներքևի մասին ու սքրոլ չլինի
