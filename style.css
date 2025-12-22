@@ -264,7 +264,7 @@ button:active {
 
   .content {
     max-width: 100% !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 20px !important;
     text-align: center;
   }
 
@@ -291,30 +291,30 @@ button:active {
   .content button {
     padding: 14px 30px;
     font-size: 18px;
-    margin: 15px auto 20px;
+    margin: 15px auto 25px;
     display: block;
   }
 
-  /* 🔓 ՆԿԱՐԻ ՄԱՍ - ՓՈՔՐԱՑՆԵԼ ՈՒ ԿԵՆՏՐՈՆԱՑՆԵԼ */
+  /* 🔓 ՆԿԱՐԻ ՄԱՍ - ԱՎԵԼԻ ՓՈՔՐ ՈՒ ԿԵՆՏՐՈՆՈՒՄ */
   .image-box {
     position: relative !important;
     width: 100%;
-    margin: 15px auto 0 !important;
-    padding-bottom: 0;
+    margin: 0 auto !important;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: auto;
     order: 3;
-    max-height: 50vh;
+    flex: 1;
   }
 
   .image-box img {
-    width: 50vw !important;
-    max-width: 280px;
-    max-height: 45vh;
+    width: 70vw !important; /* 🔓 ԷԼ ԱՎԵԼԻ ՓՈՔՐ */
+    max-width: 260px; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
+    max-height: 40vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
     height: auto;
-    margin-bottom:20px;
+    margin: 0 auto !important;
     display: block;
     object-fit: contain;
   }
@@ -351,16 +351,16 @@ button:active {
     font-size: 22px;
   }
 
-  /* ՆԿԱՐԸ */
+  /* ՆԿԱՐԸ - ԱՎԵԼԻ ՓՈՔՐ */
   .image-box img {
-    width: 80vw !important;
-    max-width: 250px;
-    max-height: 40vh;
+    width: 75vw !important;
+    max-width: 220px; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
+    max-height: 35vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
   }
   
   /* 🔓 ԿՈՊՉԱՅԻ MARGIN */
   .content button {
-    margin: 15px auto 15px;
+    margin: 15px auto 20px;
   }
 }
 
@@ -384,9 +384,10 @@ button:active {
     margin-left: 12px;
   }
 
+  /* ՆԿԱՐԸ - ԱՎԵԼԱՑՆԵՆՔ ՓՈՔՐ */
   .image-box img {
-    max-width: 220px;
-    max-height: 35vh;
+    width: 80vw !important;
+    max-width: 200px; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
+    max-height: 30vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
   }
 }
-
