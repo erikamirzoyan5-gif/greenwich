@@ -23,21 +23,22 @@ body {
 .top-bar {
   width: 100%;
   background: #32614D;
-  padding: 18px 30px; /* 🔥 Մեծացրել եմ padding-ը */
+  padding: 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ - ԷԼ ԷՋ ՄԵԾ */
+/* 🔥 ԼՈԳՈՆ - ԲԱՐԱԿ */
 .logo {
   margin-left: -6px;
 }
 
 .logo img {
-  height: 85px; /* 🔥 ԷԼ ԷՋ ՄԵԾ ԼՈԳՈ */
-  width: auto;
+  height: auto; /* 🔓 ՀԵՂԻՆՈՒՄ ԵՄ HEIGHT-Ը */
+  width: 200px; /* 🔓 ԲԱՐԱԿ ԼՈԳՈ - ՓՈՓՈԽԵԼ ԵՄ WIDTH-ՈՎ */
+  max-height: 50px; /* 🔓 ԲԱՐՁՐՈՒԹՅՈՒՆԸ ՊԱԿԱՍԵԼ ԵՄ */
 }
 
 .social-icons a {
@@ -95,20 +96,20 @@ button:hover {
   opacity: 0.9;
 }
 
-/* 🔥 ՆԿԱՐԻ ՄԱՍ - ՄԻ ՔԻՉ ՓՈՔՐ */
+/* ՆԿԱՐԻ ՄԱՍ */
 .image-box {
   position: absolute;
   right: 120px;
   bottom: 0;
-  height: calc(100vh - 120px); /* 🔓 ՊԱԿԱՍԵԼ ԵՄ ԲԱՐՁՐՈՒԹՅՈՒՆԸ */
+  height: calc(100vh - 120px);
   display: flex;
   align-items: flex-end;
 }
 
 .image-box img {
-  width: 420px; /* 🔥 ՓՈՔՐԱՑՐԵԼ ԵՄ 500-ԻՑ 420 */
+  width: 420px;
   height: auto;
-  max-height: 85vh; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ 90-ԻՑ 85 */
+  max-height: 85vh;
   object-fit: contain;
 }
 
@@ -133,11 +134,13 @@ button:hover {
 @media (max-width: 768px) {
   /* HEADER */
   .top-bar {
-    padding: 15px 20px; /* 🔥 Մեծացրել եմ mobile padding-ը */
+    padding: 15px 20px;
   }
 
   .logo img {
-    height: 70px; /* 🔥 ԷԼ ԷՋ ՄԵԾ ԼՈԳՈ ՄՈԲԱՅԼՈՒՄ */
+    height: auto; /* 🔓 ԲԱՐԱԿ MOBILE-ՈՒՄ */
+    width: 160px; /* 🔓 ԲԱՐԱԿ ԼՈԳՈ MOBILE-ՈՒՄ */
+    max-height: 45px; /* 🔓 ԲԱՐՁՐՈՒԹՅՈՒՆԸ ՊԱԿԱՍԵԼ ԵՄ */
     margin-top: 0 !important;
   }
 
@@ -151,7 +154,7 @@ button:hover {
     display: flex !important;
     flex-direction: column;
     padding: 15px 16px 0 16px !important;
-    min-height: calc(100vh - 100px); /* 🔓 ՊԱԿԱՍԵԼ ԵՄ ԲԱՐՁՐՈՒԹՅՈՒՆԸ */
+    min-height: calc(100vh - 90px);
     position: relative;
   }
 
@@ -195,9 +198,9 @@ button:hover {
   }
 
   .image-box img {
-    width: 75vw !important; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ 85-ԻՑ 75 */
-    max-width: 320px; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ 350-ԻՑ 320 */
-    max-height: 45vh; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ 50-ԻՑ 45 */
+    width: 75vw !important;
+    max-width: 320px;
+    max-height: 45vh;
     margin: 0 auto !important;
   }
 }
@@ -213,7 +216,8 @@ button:hover {
   }
 
   .logo img {
-    height: 65px; /* 🔥 Մեծացրել եմ extra small-ում */
+    width: 140px; /* 🔓 ԲԱՐԱԿ EXTRA SMALL-ՈՒՄ */
+    max-height: 40px;
   }
 
   .top-bar {
@@ -222,8 +226,8 @@ button:hover {
 
   .image-box img {
     width: 80vw !important;
-    max-width: 280px; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
-    max-height: 40vh; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
+    max-width: 280px;
+    max-height: 40vh;
   }
 }
 
@@ -234,11 +238,12 @@ button:hover {
   }
 
   .logo img {
-    height: 60px; /* 🔥 Մեծացրել եմ very small-ում */
+    width: 130px; /* 🔓 ԲԱՐԱԿ VERY SMALL-ՈՒՄ */
+    max-height: 38px;
   }
 
   .image-box img {
-    max-width: 260px; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
-    max-height: 35vh; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
+    max-width: 260px;
+    max-height: 35vh;
   }
 }
