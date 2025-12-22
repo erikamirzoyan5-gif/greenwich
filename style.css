@@ -5,7 +5,7 @@
 }
 
 html, body {
-  overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
+  overflow: hidden; /* Սքրոլ չի լինի */
   height: 100%;
   width: 100%;
 }
@@ -16,33 +16,34 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
+  overflow: hidden;
 }
 
 /* ================= TOP BAR ================= */
 .top-bar {
   width: 100%;
   background: #32614D;
-  padding: 12px 20px;
+  padding: 16px 30px; /* 🔥 Ավելի մեծ padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ - ԱՅՍ ԱՆՀՐԱԺԵՇՏ ՓՈՓՈԽԵԼ */
+/* 🔥 ԼՈԳՈՆ - ՄԵԾ */
 .logo {
   margin-left: -6px;
 }
 
 .logo img {
-  height: 50px; /* 🔓 ՀԱՍՏԱՏ ԼՈԳՈՅԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+  height: 70px; /* 🔥 ՄԵԾ ԼՈԳՈ */
+  width: auto;
 }
 
 .social-icons a {
   color: white;
-  font-size: 22px;
-  margin-left: 14px;
+  font-size: 28px; /* 🔥 ՄԵԾ ՍՈՑԻԱԼԻ ԿՆԿԱՐԻՉՆԵՐ */
+  margin-left: 20px;
   text-decoration: none;
 }
 
@@ -54,36 +55,39 @@ body {
 .main-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 100px 120px; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ PADDING-Ը, ՈՐ ՆԿԱՐԸ ՆԵՐՔԵՎ ԻՇՆԻ */
+  align-items: flex-start; /* 🔥 Վերևից սկսվի */
+  padding: 40px 120px 0 120px; /* 🔥 Վերևի padding պակասեցրեցի */
   flex: 1;
-  overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
+  overflow: hidden;
+  position: relative;
 }
 
 .content {
   max-width: 50%;
+  margin-top: 20px;
 }
 
 .content h1 {
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 42px; /* 🔥 ՄԵԾ ԳԼԽԱՎՈՐ ՏԵՔՍՏ */
+  margin-bottom: 25px;
   color: #32614D;
 }
 
 .content p {
-  font-size: 18px;
-  margin-bottom: 14px;
+  font-size: 20px; /* 🔥 ՄԵԾ ՊԱՐԱԳՐԱՖ */
+  margin-bottom: 18px;
+  line-height: 1.6;
 }
 
 /* ================= BUTTON ================= */
 button {
-  margin-top: 14px;
-  padding: 12px 26px;
+  margin-top: 25px;
+  padding: 15px 35px; /* 🔥 ՄԵԾ ԿՈՊՉԱ */
   background: #f7970f;
   border: none;
   color: white;
-  font-size: 18px;
-  border-radius: 6px;
+  font-size: 20px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -91,19 +95,21 @@ button:hover {
   opacity: 0.9;
 }
 
-/* 🔓 ՆԿԱՐԻ ԴԻՐՔԸ - ԿԱՐԵՎՈՐ ՄԱՍ */
+/* 🔥 ՆԿԱՐԻ ՄԱՍ - ԿՊԱԾ ՆԵՐՔԵՎԻՆ */
 .image-box {
+  position: absolute;
+  right: 120px;
+  bottom: 0; /* 🔓 ԼՐԻՎ ԿՊԱԾ ՆԵՐՔԵՎԻՆ */
+  height: calc(100vh - 100px); /* 🔓 ՄԱՔՍԻՄՈՒՄ ԲԱՐՁՐՈՒԹՅՈՒՆ */
   display: flex;
-  align-items: flex-end; /* 🔓 ՆԿԱՐԸ ՆԵՐՔԵՎԻՑ Է ՍԿՍՎՈՒՄ */
-  justify-content: flex-end;
-  height: 100%;
+  align-items: flex-end;
 }
 
 .image-box img {
-  width: 400px;
-  max-height: 70vh; /* 🔓 ՆԿԱՐԻ ՄԱՔՍԻՄՈՒՄ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+  width: 500px; /* 🔥 ՄԵԾ ՆԿԱՐ */
+  height: auto;
+  max-height: 90vh; /* 🔓 ԳՈՒՅՆԱՑՆՈՒՄ Է ՊԱՏԿԵՐԻ ԲԱՐՁՐՈՒԹՅՈՒՆԸ */
   object-fit: contain;
-  margin-bottom: 0; /* 🔓 ՆԵՐՔԵՎԻՑ ՀԵՌԱՎՈՐՈՒԹՅՈՒՆ ՉԿԱ */
 }
 
 /* ================= CONTACT PANEL ================= */
@@ -123,126 +129,110 @@ button:hover {
   right: 0;
 }
 
-/* ================= 📱 MOBILE (FINAL BALANCED VERSION) ================= */
+/* ================= 📱 MOBILE ================= */
 @media (max-width: 768px) {
   /* HEADER */
   .top-bar {
-    padding: 10px 14px;
-  }
-
-  .logo {
-    margin-left: -8px;
+    padding: 12px 20px;
   }
 
   .logo img {
-    height: 46px; /* 🔓 ՄՈԲԱՅԼՈՒՄ ԼՈԳՈՅԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
-    margin-top: 0 !important; /* 🔓 ԿԱՐԵՎՈՐ: ՄԵՋՆԱԿԱՆ MARGIN-Ը ՀԱՆԵԼ */
+    height: 60px; /* 🔥 ՄԵԾ ԼՈԳՈ ՄՈԲԱՅԼՈՒՄ */
+    margin-top: 0 !important;
   }
 
   .social-icons a {
-    font-size: 21px;
-    margin-left: 12px;
+    font-size: 24px;
+    margin-left: 15px;
   }
 
   /* MAIN */
   .main-section {
-    display: flex !important; /* 🔓 ՓՈՓՈԽԵԼ ԵՄ BLOCK-ԻՑ FLEX */
+    display: flex !important;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 16px !important;
-    min-height: calc(100vh - 70px);
-    overflow: hidden; /* 🔓 ՍՔՐՈԼ ՉԼԻՆԻ */
+    padding: 15px 16px 0 16px !important;
+    min-height: calc(100vh - 84px);
+    position: relative;
   }
 
   /* TEXT */
   .content {
     max-width: 100% !important;
     width: 100% !important;
-    margin-bottom: 10px !important; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ MARGIN-Ը */
+    margin-bottom: 10px !important;
     text-align: center;
   }
 
   .content h1 {
-    font-size: 31px !important;
-    line-height: 1.25;
-    margin-bottom: 10px;
+    font-size: 34px !important; /* 🔥 ՄԵԾ ՄՈԲԱՅԼՈՒՄ */
+    margin-bottom: 15px;
   }
 
   .content p {
-    font-size: 16.5px !important;
-    line-height: 1.55;
-    margin-bottom: 10px;
+    font-size: 18px !important; /* 🔥 ՄԵԾ ՄՈԲԱՅԼՈՒՄ */
+    margin-bottom: 12px;
   }
 
-  /* 🔥 CONTACT US BUTTON ԿԵՆՏՐՈՆ */
+  /* BUTTON */
   .content button {
-    display: inline-block;
-    margin: 10px auto 0;
+    padding: 14px 30px;
+    font-size: 18px;
+    margin: 15px auto 0;
   }
 
   /* IMAGE */
   .image-box {
+    position: relative;
+    right: auto;
+    bottom: auto;
     width: 100%;
-    text-align: center;
-    margin-top: auto; /* 🔓 ԿԱՐԵՎՈՐ: ՊԱՏԿԵՐԸ ՆԵՐՔԵՎ ԿՄՂԻ */
-    padding-bottom: 20px; /* 🔓 ՆԵՐՔԵՎԻՑ ՀԵՌԱՎՈՐՈՒԹՅՈՒՆ */
-    max-height: 50vh; /* 🔓 ՄԱՔՍԻՄՈՒՄ ԲԱՐՁՐՈՒԹՅՈՒՆ */
-    overflow: hidden;
+    margin-top: auto; /* 🔓 ԿՄՂԻ ՆԵՐՔԵՎ */
+    padding-bottom: 10px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 
-  /* 🔥 ՆԿԱՐԸ */
   .image-box img {
-    width: 70vw !important;
-    max-width: 300px;
-    max-height: 45vh; /* 🔓 ՄՈԲԱՅԼՈՒՄ ՊԱՏԿԵՐԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+    width: 85vw !important; /* 🔥 ՄԵԾ ՆԿԱՐ ՄՈԲԱՅԼՈՒՄ */
+    max-width: 350px;
+    max-height: 50vh;
     margin: 0 auto !important;
-    display: block;
-    object-fit: contain;
-  }
-
-  /* CONTACT PANEL */
-  .contact-panel {
-    width: 100%;
-    right: -100%;
-  }
-
-  .contact-panel.open {
-    right: 0;
   }
 }
 
 /* ================= EXTRA SMALL ================= */
 @media (max-width: 480px) {
   .content h1 {
-    font-size: 29px !important;
+    font-size: 32px !important;
   }
 
   .content p {
-    font-size: 16px !important;
+    font-size: 17px !important;
+  }
+
+  .logo img {
+    height: 55px;
   }
 
   .image-box img {
-    max-width: 280px;
-    max-height: 40vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
-  }
-  
-  .logo img {
-    height: 42px; /* 🔓 ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ ԼՈԳՈՅԻ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+    width: 90vw !important;
+    max-width: 320px;
   }
 }
 
 /* ================= VERY SMALL ================= */
 @media (max-width: 360px) {
   .content h1 {
-    font-size: 27px !important;
+    font-size: 30px !important;
+  }
+
+  .logo img {
+    height: 50px;
   }
 
   .image-box img {
-    max-width: 260px;
-    max-height: 35vh; /* 🔓 ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
-  }
-  
-  .logo img {
-    height: 38px; /* 🔓 ՇԱՏ ՓՈՔՐ ԷԿՐԱՆՆԵՐՈՒՄ */
+    max-width: 300px;
   }
 }
