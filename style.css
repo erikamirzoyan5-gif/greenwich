@@ -30,15 +30,17 @@ body {
   flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ - ԲԱՐԱԿ */
+/* 🔥 ԼՈԳՈՆ - ՊՐՈՊՈՐՍԻԱՆԱԼ */
 .logo {
   margin-left: -6px;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  height: auto; /* 🔓 ՀԵՂԻՆՈՒՄ ԵՄ HEIGHT-Ը */
-  width: 200px; /* 🔓 ԲԱՐԱԿ ԼՈԳՈ - ՓՈՓՈԽԵԼ ԵՄ WIDTH-ՈՎ */
-  max-height: 50px; /* 🔓 ԲԱՐՁՐՈՒԹՅՈՒՆԸ ՊԱԿԱՍԵԼ ԵՄ */
+  height: 65px; /* 🔓 ՎԵՐԱԴԱՐՁՆԵԼ ԵՄ HEIGHT-Ը */
+  width: auto; /* 🔓 WIDTH-Ը ԿԱՐԳԱՎՈՐՎԵԼՈՒ Է ԱՎՏՈՄԱՏ */
+  object-fit: contain; /* 🔓 ՊԱՀՊԱՆԵԼՈՒ Է ՊՐՈՊՈՐՍԻԱՆԵՐԸ */
 }
 
 .social-icons a {
@@ -138,9 +140,9 @@ button:hover {
   }
 
   .logo img {
-    height: auto; /* 🔓 ԲԱՐԱԿ MOBILE-ՈՒՄ */
-    width: 160px; /* 🔓 ԲԱՐԱԿ ԼՈԳՈ MOBILE-ՈՒՄ */
-    max-height: 45px; /* 🔓 ԲԱՐՁՐՈՒԹՅՈՒՆԸ ՊԱԿԱՍԵԼ ԵՄ */
+    height: 55px; /* 🔓 ՄՈԲԱՅԼՈՒՄ ԷԼ ԲԱՐՁՐ */
+    width: auto;
+    object-fit: contain;
     margin-top: 0 !important;
   }
 
@@ -154,7 +156,7 @@ button:hover {
     display: flex !important;
     flex-direction: column;
     padding: 15px 16px 0 16px !important;
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 85px);
     position: relative;
   }
 
@@ -216,8 +218,7 @@ button:hover {
   }
 
   .logo img {
-    width: 140px; /* 🔓 ԲԱՐԱԿ EXTRA SMALL-ՈՒՄ */
-    max-height: 40px;
+    height: 50px; /* 🔓 EXTRA SMALL-ՈՒՄ */
   }
 
   .top-bar {
@@ -238,8 +239,7 @@ button:hover {
   }
 
   .logo img {
-    width: 130px; /* 🔓 ԲԱՐԱԿ VERY SMALL-ՈՒՄ */
-    max-height: 38px;
+    height: 45px; /* 🔓 VERY SMALL-ՈՒՄ */
   }
 
   .image-box img {
