@@ -315,10 +315,9 @@ button:active {
     max-width: 260px; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
     max-height: 40vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
     height: auto;
-    margin: 0 auto !important;
+    margin-left: 200px;
     display: block;
     object-fit: contain;
-    margin-left: 160px;
   }
 
   /* CONTACT PANEL MOBILE */
@@ -393,5 +392,6 @@ button:active {
     max-height: 30vh; /* 🔓 ԱՎԵԼԻ ՓՈՔՐ */
   }
 }
+
 
 
