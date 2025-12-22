@@ -5,7 +5,7 @@
 }
 
 html, body {
-  overflow: hidden; /* Սքրոլ չի լինի */
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
@@ -23,26 +23,26 @@ body {
 .top-bar {
   width: 100%;
   background: #32614D;
-  padding: 16px 30px; /* 🔥 Ավելի մեծ padding */
+  padding: 18px 30px; /* 🔥 Մեծացրել եմ padding-ը */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
 }
 
-/* 🔥 ԼՈԳՈՆ - ՄԵԾ */
+/* 🔥 ԼՈԳՈՆ - ԷԼ ԷՋ ՄԵԾ */
 .logo {
   margin-left: -6px;
 }
 
 .logo img {
-  height: 70px; /* 🔥 ՄԵԾ ԼՈԳՈ */
+  height: 85px; /* 🔥 ԷԼ ԷՋ ՄԵԾ ԼՈԳՈ */
   width: auto;
 }
 
 .social-icons a {
   color: white;
-  font-size: 28px; /* 🔥 ՄԵԾ ՍՈՑԻԱԼԻ ԿՆԿԱՐԻՉՆԵՐ */
+  font-size: 28px;
   margin-left: 20px;
   text-decoration: none;
 }
@@ -55,8 +55,8 @@ body {
 .main-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 🔥 Վերևից սկսվի */
-  padding: 40px 120px 0 120px; /* 🔥 Վերևի padding պակասեցրեցի */
+  align-items: flex-start;
+  padding: 40px 120px 0 120px;
   flex: 1;
   overflow: hidden;
   position: relative;
@@ -68,13 +68,13 @@ body {
 }
 
 .content h1 {
-  font-size: 42px; /* 🔥 ՄԵԾ ԳԼԽԱՎՈՐ ՏԵՔՍՏ */
+  font-size: 42px;
   margin-bottom: 25px;
   color: #32614D;
 }
 
 .content p {
-  font-size: 20px; /* 🔥 ՄԵԾ ՊԱՐԱԳՐԱՖ */
+  font-size: 20px;
   margin-bottom: 18px;
   line-height: 1.6;
 }
@@ -82,7 +82,7 @@ body {
 /* ================= BUTTON ================= */
 button {
   margin-top: 25px;
-  padding: 15px 35px; /* 🔥 ՄԵԾ ԿՈՊՉԱ */
+  padding: 15px 35px;
   background: #f7970f;
   border: none;
   color: white;
@@ -95,20 +95,20 @@ button:hover {
   opacity: 0.9;
 }
 
-/* 🔥 ՆԿԱՐԻ ՄԱՍ - ԿՊԱԾ ՆԵՐՔԵՎԻՆ */
+/* 🔥 ՆԿԱՐԻ ՄԱՍ - ՄԻ ՔԻՉ ՓՈՔՐ */
 .image-box {
   position: absolute;
   right: 120px;
-  bottom: 0; /* 🔓 ԼՐԻՎ ԿՊԱԾ ՆԵՐՔԵՎԻՆ */
-  height: calc(100vh - 100px); /* 🔓 ՄԱՔՍԻՄՈՒՄ ԲԱՐՁՐՈՒԹՅՈՒՆ */
+  bottom: 0;
+  height: calc(100vh - 120px); /* 🔓 ՊԱԿԱՍԵԼ ԵՄ ԲԱՐՁՐՈՒԹՅՈՒՆԸ */
   display: flex;
   align-items: flex-end;
 }
 
 .image-box img {
-  width: 500px; /* 🔥 ՄԵԾ ՆԿԱՐ */
+  width: 420px; /* 🔥 ՓՈՔՐԱՑՐԵԼ ԵՄ 500-ԻՑ 420 */
   height: auto;
-  max-height: 90vh; /* 🔓 ԳՈՒՅՆԱՑՆՈՒՄ Է ՊԱՏԿԵՐԻ ԲԱՐՁՐՈՒԹՅՈՒՆԸ */
+  max-height: 85vh; /* 🔓 ՊԱԿԱՍԵԼ ԵՄ 90-ԻՑ 85 */
   object-fit: contain;
 }
 
@@ -133,11 +133,11 @@ button:hover {
 @media (max-width: 768px) {
   /* HEADER */
   .top-bar {
-    padding: 12px 20px;
+    padding: 15px 20px; /* 🔥 Մեծացրել եմ mobile padding-ը */
   }
 
   .logo img {
-    height: 60px; /* 🔥 ՄԵԾ ԼՈԳՈ ՄՈԲԱՅԼՈՒՄ */
+    height: 70px; /* 🔥 ԷԼ ԷՋ ՄԵԾ ԼՈԳՈ ՄՈԲԱՅԼՈՒՄ */
     margin-top: 0 !important;
   }
 
@@ -151,7 +151,7 @@ button:hover {
     display: flex !important;
     flex-direction: column;
     padding: 15px 16px 0 16px !important;
-    min-height: calc(100vh - 84px);
+    min-height: calc(100vh - 100px); /* 🔓 ՊԱԿԱՍԵԼ ԵՄ ԲԱՐՁՐՈՒԹՅՈՒՆԸ */
     position: relative;
   }
 
@@ -164,12 +164,12 @@ button:hover {
   }
 
   .content h1 {
-    font-size: 34px !important; /* 🔥 ՄԵԾ ՄՈԲԱՅԼՈՒՄ */
+    font-size: 34px !important;
     margin-bottom: 15px;
   }
 
   .content p {
-    font-size: 18px !important; /* 🔥 ՄԵԾ ՄՈԲԱՅԼՈՒՄ */
+    font-size: 18px !important;
     margin-bottom: 12px;
   }
 
@@ -186,8 +186,8 @@ button:hover {
     right: auto;
     bottom: auto;
     width: 100%;
-    margin-top: auto; /* 🔓 ԿՄՂԻ ՆԵՐՔԵՎ */
-    padding-bottom: 10px;
+    margin-top: auto;
+    padding-bottom: 15px;
     height: auto;
     display: flex;
     justify-content: center;
@@ -195,9 +195,9 @@ button:hover {
   }
 
   .image-box img {
-    width: 85vw !important; /* 🔥 ՄԵԾ ՆԿԱՐ ՄՈԲԱՅԼՈՒՄ */
-    max-width: 350px;
-    max-height: 50vh;
+    width: 75vw !important; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ 85-ԻՑ 75 */
+    max-width: 320px; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ 350-ԻՑ 320 */
+    max-height: 45vh; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ 50-ԻՑ 45 */
     margin: 0 auto !important;
   }
 }
@@ -213,12 +213,17 @@ button:hover {
   }
 
   .logo img {
-    height: 55px;
+    height: 65px; /* 🔥 Մեծացրել եմ extra small-ում */
+  }
+
+  .top-bar {
+    padding: 12px 16px;
   }
 
   .image-box img {
-    width: 90vw !important;
-    max-width: 320px;
+    width: 80vw !important;
+    max-width: 280px; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
+    max-height: 40vh; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
   }
 }
 
@@ -229,10 +234,11 @@ button:hover {
   }
 
   .logo img {
-    height: 50px;
+    height: 60px; /* 🔥 Մեծացրել եմ very small-ում */
   }
 
   .image-box img {
-    max-width: 300px;
+    max-width: 260px; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
+    max-height: 35vh; /* 🔓 ՓՈՔՐԱՑՐԵԼ ԵՄ */
   }
 }
